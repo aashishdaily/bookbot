@@ -14,3 +14,12 @@ def count_characters(texts: str):
 
 
 
+def sorting(characters_dict: dict):
+    filtered_items = []
+
+    for key, value in characters_dict.items():
+        valuess = {"char": key, "num": value}
+        filtered_items.append(valuess)
+    
+    filtered_items.sort(key=lambda item: item["num"], reverse=True)
+    return filtered_items
